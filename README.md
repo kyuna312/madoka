@@ -2,7 +2,7 @@
 
 魔法少女まどか☆マギカ CSS Animation Exercises
 
-<!-- [https://madoka.ma.moe/](http://magia.cyris.moe/) -->
+<!-- [https://magia.cyris.moe/](http://magia.cyris.moe/) -->
 
 <!-- ![screenshot](https://raw.githubusercontent.com/iCyris/Magia/main/res/screenshot.png) -->
 

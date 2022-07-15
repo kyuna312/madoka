@@ -129,7 +129,7 @@ const ChapterHome: React.FC<{}> = ({}) => {
         </div>
       </div>
       <div className="chapter-home-links">
-        {/* <a className="chapter-home-links-icon-wrap" title="Profile" href="https://cyris.moe" target="_blank"><i className="czs-game"></i></a> */}
+        <a className="chapter-home-links-icon-wrap" title="Profile" href="https://www.maririn.ml/" target="_blank"><i className="czs-game"></i></a>
         <a className="chapter-home-links-icon-wrap" title="GitHub" href="https://github.com/amane312" target="_blank"><i className="czs-github-logo"></i></a>
       </div>
     </div>

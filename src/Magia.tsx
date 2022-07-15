@@ -60,7 +60,7 @@ function App() {
         <audio className="music-audio">
           <source src={mp3url} type="audio/mpeg" />
           <source src={mp3url} type="audio/ogg" />
-          <embed height="100" width="150" src={mp3url} />
+          <embed height="50" width="100" src={mp3url} />
         </audio>
       </div>
     </div>

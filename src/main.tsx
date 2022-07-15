@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import Magia from './Madoka'
+import Magia from './Magia'
 
 ReactDOM.render(
   <React.StrictMode>
