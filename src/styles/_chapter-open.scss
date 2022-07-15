@@ -1,0 +1,475 @@
+.chapter-open {
+  background-color: $theme-gray;
+}
+
+.chapter-open__bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  .chapter-open__bg-group1, .chapter-open__bg-group2 {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+
+    span {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $theme-purple;
+    }
+  }
+
+  .chapter-open__bg-group1 {
+    left: 0;
+    top: 0;
+    transform: translateX(-100%) translateY(-100%);
+
+    span {
+      left: 0;
+      top: 0;
+    }
+
+    span:nth-child(1) {
+      clip-path: polygon(0 0, 0% 25%, 100% 0);
+    }
+
+    span:nth-child(2) {
+      clip-path: polygon(0 0, 0 100%, 25% 0);
+    }
+  }
+
+  .chapter-open__bg-group2 {
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%) translateY(100%);
+
+    span {
+      right: 0;
+      bottom: 0;
+    }
+
+    span:nth-child(1) {
+      clip-path: polygon(75% 100%, 100% 100%, 100% 0%);
+    }
+
+    span:nth-child(2) {
+      clip-path: polygon(0 100%, 100% 100%, 100% 75%);
+    }
+  }
+}
+
+$chapter-open-title-size: 20vmin;
+.chapter-open__title {
+  width: $chapter-open-title-size;
+  height: $chapter-open-title-size * 2;
+  position: absolute;
+  left: calc(50% - #{$chapter-open-title-size} / 2);
+  top: calc(50% - #{$chapter-open-title-size});
+}
+
+.chapter-open__title-item-box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $theme-gray;
+  }
+}
+
+.chapter-open__title-item {
+  height: 50%;
+  width: 100%;
+  position: relative;
+
+  > span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    vertical-align: middle;
+    line-height: $chapter-open-title-size;
+    color: $theme-purple;
+    font-size: 80px;
+    // background-color: $theme-gray;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+  }
+
+  .title-mo {
+    background-image: url('/img/chapter-open-title-1.svg');
+  }
+
+  .title-fa  {
+    background-image: url('/img/chapter-open-title-2.svg');
+  }
+
+  .title-nv {
+    background-image: url('/img/chapter-open-title-3.svg');
+    transform: translateX(-100%);
+  }
+}
+
+.chapter-open__lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  .chapter-open__line-top, .chapter-open__line-bottom {
+    position: absolute;
+    width: 2px;
+    height: calc(50% - #{$chapter-open-title-size});
+    left: calc(50% - 1px);
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $theme-purple;
+      transform-origin: center;
+    }
+  }
+  .chapter-open__line-top {
+    top: 0;
+
+    &::after {
+      transform: translateY(-100%);
+    }
+  }
+  .chapter-open__line-bottom {
+    bottom: 0;
+
+    &::after {
+      transform: translateY(100%);
+    }
+  }
+}
+
+.chapter-open__center-ball {
+  width: $chapter-open-title-size * 4;
+  height: $chapter-open-title-size * 4;
+  border-radius: 50%;
+  left: calc(50% - #{$chapter-open-title-size} * 2);
+  top: calc(50% - #{$chapter-open-title-size} * 2);
+  position: absolute;
+  background-color: $theme-purple;
+  transform-origin: center center;
+  transform: scale(0);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $theme-gray;
+    transform-origin: center center;
+    transform: scale(0);
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    border: 4px solid $theme-purple;
+    border-radius: 50%;
+    z-index: 1;
+    transform: scale(0);
+
+    &:nth-child(1) {
+      left: -4vmin;
+      top: -4vmin;
+    }
+
+    &:nth-child(2) {
+      right: -4vmin;
+      bottom: -4vmin;
+    }
+  }
+}
+
+.chapter-open__title-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  .chapter-open__title-wrap-item {
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+
+    $size: 2px;
+
+    &::before, &::after {
+      position: absolute;
+      content: "";
+      background-color: $theme-purple;
+    }
+
+    // item-1
+    &:nth-child(1)::before {
+      width: 100%;
+      height: $size;
+      left: 0;
+      top: 0;
+      transform: translateX(100%);
+    }
+    &:nth-child(1)::after {
+      height: 100%;
+      width: $size;
+      left: 0;
+      top: 0;
+      transform: translateY(-100%);
+    }
+
+    // item-2
+    &:nth-child(2)::before {
+      width: 100%;
+      height: $size;
+      right: 0;
+      top: 0;
+      transform: translateX(-100%);
+    }
+    &:nth-child(2)::after {
+      height: 100%;
+      width: $size;
+      right: 0;
+      top: 0;
+      transform: translateY(-100%);
+    }
+
+    // item-3
+    &:nth-child(3)::before {
+      width: 100%;
+      height: $size;
+      left: 0;
+      bottom: 0;
+      transform: translateX(100%);
+    }
+    &:nth-child(3)::after {
+      height: 100%;
+      width: $size;
+      left: 0;
+      bottom: 0;
+      transform: translateY(100%);
+    }
+
+    // item-4
+    &:nth-child(4)::before {
+      width: 100%;
+      height: $size;
+      right: 0;
+      bottom: 0;
+      transform: translateX(-100%);
+    }
+    &:nth-child(4)::after {
+      height: 100%;
+      width: $size;
+      right: 0;
+      bottom: 0;
+      transform: translateY(100%);
+    }
+  }
+}
+
+.chapter-open__switch {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  .chapter-open__switch-balls {
+    span {
+      width: 200vmax;
+      height: 200vmax;
+      position: absolute;
+      display: block;
+      border-radius: 50%;
+      overflow: hidden;
+      transform: scale(0);
+    }
+
+    span:nth-child(1) {
+      left: -100vmax;
+      bottom: -100vmax;
+    }
+
+    span:nth-child(2) {
+      right: -100vmax;
+      top: -100vmax;
+    } 
+  }
+
+  .chapter-open__switch-balls:nth-child(1) {
+    span { background-color: $theme-purple ;}
+  }
+
+  .chapter-open__switch-balls:nth-child(2) {
+    span { background-color: $theme-pink ;}
+  }
+
+  .chapter-open__switch-balls:nth-child(3) {
+    span { background-color: $theme-blue ;}
+  }
+
+  .chapter-open__switch-balls:nth-child(4) {
+    span { background-color: $theme-red ;}
+  }
+
+  .chapter-open__switch-rotate {
+    background-color: $theme-yellow;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: bottom center;
+    transform: rotate(180deg);
+  }
+
+}
+
+/* Animations */
+.chapter-open__line-top::after {
+  animation: top-slide-through .8s linear forwards;
+}
+
+.chapter-open__line-bottom::after {
+  animation: bottom-slide-through .8s linear forwards;
+}
+
+.chapter-open__title-wrap {
+  $animation-time: .4s;
+  $animation-delay: .4s;
+
+  .chapter-open__title-wrap-item {
+    &::before {
+      animation-duration: $animation-time;
+      animation-delay: $animation-delay;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+    }
+
+    &::after {
+      animation-duration: $animation-time * 2;
+      animation-delay: #{$animation-time + $animation-delay};
+      animation-fill-mode: forwards;
+    }
+  }
+
+  .chapter-open__title-wrap-item:nth-child(1) {
+    &::before { animation-name: right-slide-through; }
+    &::after { animation-name: top-slide-through; }
+  }
+  
+  .chapter-open__title-wrap-item:nth-child(2) {
+    &::before { animation-name: left-slide-through; }
+    &::after { animation-name: top-slide-through; }
+  }
+  
+  .chapter-open__title-wrap-item:nth-child(3) {
+    &::before { animation-name: right-slide-through; }
+    &::after { animation-name: bottom-slide-through; }
+  }
+  
+  .chapter-open__title-wrap-item:nth-child(4) {
+    &::before { animation-name: left-slide-through; }
+    &::after { animation-name: bottom-slide-through; }
+  }
+}
+
+.chapter-open__title-item-box::after {
+  animation: bottom-slide-out .4s linear .8s forwards;
+}
+
+.chapter-open__bg-group1 {
+  animation: chapter-open__bg-group1-in .6s ease 1.8s forwards;
+}
+
+.chapter-open__bg-group2 {
+  animation: chapter-open__bg-group2-in .6s ease 1.8s forwards;
+}
+
+.chapter-open__title-item {
+  .title-fa {
+    animation: right-slide-out .8s ease forwards 1.4s;
+  }
+
+  .title-nv {
+    animation: left-slide-in .8s ease forwards 1.4s;
+  } 
+}
+
+.chapter-open__center-ball {
+  animation: scale0-1 .48s ease 2s forwards;
+
+  &::after { animation: scale0-1 .48s ease 2.1s forwards; }
+
+  span:nth-child(1) {
+    animation: scale0-1-fade-out .8s ease-in-out 2.1s forwards;
+  }
+  span:nth-child(2) {
+    animation: scale0-1-fade-out .8s ease-in-out 2.3s forwards;
+  }
+}
+
+.chapter-open__switch-balls {
+  span {
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+    animation-name: scale0-1;
+    animation-timing-function: cubic-bezier(.1,.92,.96,.35);
+  }
+}
+.chapter-open__switch-balls:nth-child(1) {
+  span { animation-delay: 3s; }
+}
+.chapter-open__switch-balls:nth-child(2) {
+  span { animation-delay: 3.2s; }
+}
+.chapter-open__switch-balls:nth-child(3) {
+  span { animation-delay: 3.4s; }
+}
+.chapter-open__switch-balls:nth-child(4) {
+  span { animation-delay: 3.6s; }
+}
+
+.chapter-open__switch-rotate {
+  animation: chapter-open__switch-rotate-in 1.2s cubic-bezier(.25,.1,.12,1.14) 4s forwards;
+}
