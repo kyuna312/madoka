@@ -28,7 +28,7 @@
     bottom: 0;
     transform: translateY(100%);
 
-    //
+    // 补足漏出的空隙
     &::after {
       content: "";
       position: absolute;

@@ -1,5 +1,3 @@
-@use "sass:math";
-
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -425,7 +423,7 @@
 @keyframes chaprer2__noise-anim {
   $steps: 30;
   @for $i from 0 through $steps {
-    #{percentage($i * math.div(1, $steps))} {
+    #{percentage($i * (1 / $steps))} {
       clip: rect(random(150) + px, 9999px, random(140) + px, 0);
     }
   }
