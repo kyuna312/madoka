@@ -1,19 +1,12 @@
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+@use 'sass:math';
 
-@keyframes fadeout {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 @keyframes scale0-1 {
@@ -87,15 +80,6 @@
 	}
 	100% {
 		transform: translateX(-100%);
-	}
-}
-
-@keyframes bottom-slide-out {
-	0% {
-		transform: translateY(0%);
-	}
-	100% {
-		transform: translateY(100%);
 	}
 }
 
@@ -192,7 +176,8 @@
 @keyframes common__bg-color-change-1 {
 	from {
 		background-color: $theme-yellow;
-	} to {
+	}
+	to {
 		background-color: $theme-red;
 	}
 }
@@ -200,7 +185,8 @@
 @keyframes common__bg-color-change-2 {
 	from {
 		background-color: $theme-red;
-	} to {
+	}
+	to {
 		background-color: $theme-blue;
 	}
 }
@@ -208,7 +194,8 @@
 @keyframes common__bg-color-change-3 {
 	from {
 		background-color: $theme-blue;
-	} to {
+	}
+	to {
 		background-color: $theme-pink;
 	}
 }
@@ -216,7 +203,8 @@
 @keyframes common__bg-color-change-4 {
 	from {
 		background-color: $theme-pink;
-	} to {
+	}
+	to {
 		background-color: $theme-purple;
 	}
 }
@@ -224,7 +212,8 @@
 @keyframes common__bg-color-change-5 {
 	from {
 		background-color: $theme-purple;
-	} to {
+	}
+	to {
 		background-color: $theme-yellow;
 	}
 }
@@ -232,7 +221,8 @@
 @keyframes common__border-color-change-1 {
 	from {
 		border-color: $theme-yellow;
-	} to {
+	}
+	to {
 		border-color: $theme-red;
 	}
 }
@@ -240,7 +230,8 @@
 @keyframes common__border-color-change-2 {
 	from {
 		border-color: $theme-red;
-	} to {
+	}
+	to {
 		border-color: $theme-blue;
 	}
 }
@@ -248,7 +239,8 @@
 @keyframes common__border-color-change-3 {
 	from {
 		border-color: $theme-blue;
-	} to {
+	}
+	to {
 		border-color: $theme-pink;
 	}
 }
@@ -256,7 +248,8 @@
 @keyframes common__border-color-change-4 {
 	from {
 		border-color: $theme-pink;
-	} to {
+	}
+	to {
 		border-color: $theme-purple;
 	}
 }
@@ -264,7 +257,8 @@
 @keyframes common__border-color-change-5 {
 	from {
 		border-color: $theme-purple;
-	} to {
+	}
+	to {
 		border-color: $theme-yellow;
 	}
 }
@@ -280,6 +274,7 @@
 		opacity: 1;
 	}
 }
+
 @keyframes chapter-open__bg-group2-in {
 	0% {
 		transform: translateX(100%) translateY(100%);
@@ -307,126 +302,121 @@
 @keyframes chapter1__word-1-show {
 	from {
 		transform: translateY(-70vh) rotateY(0) rotateX(0);
-		opacity: 0
+		opacity: 0;
 	}
-
 	to {
 		transform: translateY(0) rotateY(360deg) rotateX(360deg);
-		opacity: .7
+		opacity: 0.7;
 	}
 }
+
 @keyframes chapter1__word-1-hidden {
 	from {
 		transform: translateY(0) rotateY(0) rotateX(0);
-		opacity: .7
+		opacity: 0.7;
 	}
-
 	to {
 		transform: translateY(70vh) rotateY(360deg) rotateX(360deg);
-		opacity: 0
+		opacity: 0;
 	}
 }
 
 @keyframes chapter1__word-2-show {
 	from {
 		transform: translateX(-70vw) rotateX(0) rotateY(0);
-		opacity: 0
+		opacity: 0;
 	}
-
 	to {
 		transform: translateX(0) rotateX(360deg) rotateY(360deg);
-		opacity: .7
+		opacity: 0.7;
 	}
 }
+
 @keyframes chapter1__word-2-hidden {
 	from {
 		transform: translateX(0) rotateX(0) rotateY(0);
-		opacity: .7
+		opacity: 0.7;
 	}
-
 	to {
 		transform: translateX(70vw) rotateX(360deg) rotateY(360deg);
-		opacity: 0
+		opacity: 0;
 	}
 }
 
 @keyframes chapter1__word-3-show {
 	from {
 		transform: translateX(70vw) rotateX(0) rotateY(0);
-		opacity: 0
+		opacity: 0;
 	}
-
 	to {
 		transform: translateX(0) rotateX(360deg) rotateY(360deg);
-		opacity: .7
+		opacity: 0.7;
 	}
 }
+
 @keyframes chapter1__word-3-hidden {
 	from {
 		transform: translateX(0) rotateX(0) rotateY(0);
-		opacity: .7
+		opacity: 0.7;
 	}
-
 	to {
 		transform: translateX(-70vw) rotateX(360deg) rotateY(360deg);
-		opacity: 0
+		opacity: 0;
 	}
 }
 
 @keyframes chapter1__word-4-show {
 	from {
 		transform: translateY(70vh) rotateY(360deg) rotateX(360deg);
-		opacity: 0
+		opacity: 0;
 	}
-
 	to {
 		transform: translateY(0) rotateY(0) rotateX(0);
-		opacity: .7
+		opacity: 0.7;
 	}
 }
+
 @keyframes chapter1__word-4-hidden {
 	from {
 		transform: translateY(0) rotateY(0) rotateX(0);
-		opacity: .7
+		opacity: 0.7;
 	}
-
 	to {
 		transform: translateY(-70vh) rotateY(360deg) rotateX(360deg);
-		opacity: 0
+		opacity: 0;
 	}
 }
 
 @keyframes chapter1__word-5-show {
 	from {
 		transform: scale(10) rotateX(0) rotateY(0);
-		opacity: 0
+		opacity: 0;
 	}
-
 	to {
 		transform: scale(1) rotateX(360deg) rotateY(360deg);
-		opacity: .7
+		opacity: 0.7;
 	}
 }
+
 @keyframes chapter1__word-5-hidden {
 	from {
 		transform: scale(1) rotateX(360deg) rotateY(360deg);
-		opacity: .7
+		opacity: 0.7;
 	}
-
 	to {
 		transform: scale(0) rotateX(0) rotateY(0);
-		opacity: 0
+		opacity: 0;
 	}
 }
 
 /* chapter-2-keyframes */
 @keyframes chaprer2__noise-anim {
-  $steps: 30;
-  @for $i from 0 through $steps {
-    #{percentage($i * (1 / $steps))} {
-      clip: rect(random(150) + px, 9999px, random(140) + px, 0);
-    }
-  }
+	$steps: 30;
+	@for $i from 0 through $steps {
+		#{percentage($i * math.div(1, $steps))} {
+			clip: rect(random(150) + px, 9999px, random(140) + px, 0);
+		}
+	}
 }
 
 @keyframes chapter2__switch-group2-stone-in {
@@ -440,7 +430,6 @@
 	}
 }
 
-
 @keyframes chapter2__switch-group2-stone-out {
 	0% {
 		opacity: 1;
@@ -448,12 +437,9 @@
 	}
 	100% {
 		opacity: 1;
-		transform: translateY(70vh);;
+		transform: translateY(70vh);
 	}
 }
-
-/* chapter-3-keyframes */
-
 
 /* chapter-home-keyframes */
 @keyframes chapter-home-character-show {
@@ -473,12 +459,23 @@
 		opacity: 0;
 	}
 }
+
 @keyframes icon-scale-in {
-	0% { transform: scale(0); }
-	40% { transform: scale(1.1); }
-	60% { transform: scale(1); }
-	80% { transform: scale(1.03); }
-	100% { transform: scale(1); }
+	0% {
+		transform: scale(0);
+	}
+	40% {
+		transform: scale(1.1);
+	}
+	60% {
+		transform: scale(1);
+	}
+	80% {
+		transform: scale(1.03);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 
 @keyframes music-state-change-to-true {
