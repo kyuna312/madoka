@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import ChapterOpen from './components/open';
 import Chapter1 from './components/chapter1';
 import Chapter2 from './components/chapter2';

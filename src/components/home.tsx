@@ -129,7 +129,7 @@ const ChapterHome: React.FC<{}> = ({}) => {
         </div>
       </div>
       <div className="chapter-home-links">
-        <a className="chapter-home-links-icon-wrap" title="Profile" href="https://kyuna-web-kyuna-projects.vercel.app/" target="_blank"><i className="czs-game"></i></a>
+        <a className="chapter-home-links-icon-wrap" title="Profile" href="https://kyuna-web.vercel.app" target="_blank"><i className="czs-game"></i></a>
         <a className="chapter-home-links-icon-wrap" title="GitHub" href="https://github.com/kyuna312" target="_blank"><i className="czs-github-logo"></i></a>
       </div>
     </div>
