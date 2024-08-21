@@ -389,11 +389,10 @@
       }
     }
   }
-
   .chapter3-open5-group2 {
     @for $i from 1 through 4 {
       span:nth-child(#{$i}) {
-        animation: bottom-slide-in .4s ease #{($i - 1) * 0.1 +$open-delay}s forwards;
+        animation: bottom-slide-in .4s ease #{($i - 1) * 0.1 + $open-delay}s forwards;
       }
     }
     @for $i from 5 through 8 {
